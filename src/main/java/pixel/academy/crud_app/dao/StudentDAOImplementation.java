@@ -68,10 +68,10 @@ public class StudentDAOImplementation implements StudentDAO {
     @Transactional
     public void delete(Integer id) {
 
-        // preluam studentul di baza de date
+        // retrieve the student from the database
         Student theStudent = entityManager.find(Student.class, id);
 
-        // stergem studentul
+        // remove the student
         entityManager.remove(theStudent);
 
     }
